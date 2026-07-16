@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test cases | Aleksandra Kosulnikova</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f7f7f5;
+            color: #1c1c1c;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1b2540;
+            color: #ffffff;
+            padding: 40px 24px;
+        }
+
+        header .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 14px;
+            opacity: 0.85;
+            margin-bottom: 20px;
+        }
+
+        .back-link:hover { opacity: 1; }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 15px;
+            color: #c7cbdb;
+            margin-top: 8px;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        .project-note {
+            background-color: #ffffff;
+            border-left: 3px solid #1b2540;
+            padding: 16px 20px;
+            margin-bottom: 32px;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 15px;
+            color: #444444;
+        }
+
+        .project-note strong { color: #1c1c1c; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 14px;
+        }
+
+        caption {
+            text-align: left;
+            font-family: 'Georgia', serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1c1c1c;
+        }
+
+        th {
+            background-color: #1b2540;
+            color: #ffffff;
+            text-align: left;
+            padding: 12px 14px;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 14px;
+            border-bottom: 1px solid #e5e5e2;
+            vertical-align: top;
+        }
+
+        tr:last-child td { border-bottom: none; }
+
+        .status {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .status.pass { background-color: #e2f0e5; color: #276739; }
+        .status.fail { background-color: #fbe4e4; color: #9c2a2a; }
+        .status.blocked { background-color: #f2e9d8; color: #8a5a12; }
+
+        .test-block {
+            margin-bottom: 48px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 13px;
+            color: #888888;
+        }
+
+        @media (max-width: 640px) {
+            table, thead, tbody, tr { display: block; }
+            thead { display: none; }
+            tr { margin-bottom: 16px; border: 1px solid #e5e5e2; border-radius: 4px; }
+            td { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid #f0f0ee; }
+            td::before { content: attr(data-label); font-weight: 600; color: #666; min-width: 110px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to portfolio</a>
+        <h1>Test cases</h1>
+        <p>Sample test cases from manual and automated testing practice</p>
+    </div>
+</header>
+
+<main>
+
+    <div class="project-note">
+        <strong>About this project:</strong> Test cases written for the login and checkout flow of a demo trading platform, covering positive, negative, and edge-case scenarios.
+    </div>
+
+    <div class="test-block">
+        <table>
+            <caption>Login — email and password authentication</caption>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Steps</th>
+                <th>Expected result</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td data-label="ID">TC-001</td>
+                <td data-label="Title">Successful login with valid credentials</td>
+                <td data-label="Steps">1. Open login page<br>2. Enter valid email and password<br>3. Click "Log in"</td>
+                <td data-label="Expected result">User is redirected to the dashboard</td>
+                <td data-label="Status"><span class="status pass">Pass</span></td>
+            </tr>
+            <tr>
+                <td data-label="ID">TC-002</td>
+                <td data-label="Title">Login with incorrect password</td>
+                <td data-label="Steps">1. Open login page<br>2. Enter valid email, wrong password<br>3. Click "Log in"</td>
+                <td data-label="Expected result">Error message "Incorrect email or password" is shown, user stays on login page</td>
+                <td data-label="Status"><span class="status pass">Pass</span></td>
+            </tr>
+            <tr>
+                <td data-label="ID">TC-003</td>
+                <td data-label="Title">Login with empty fields</td>
+                <td data-label="Steps">1. Open login page<br>2. Leave email and password empty<br>3. Click "Log in"</td>
+                <td data-label="Expected result">"Log in" button is disabled, or validation errors appear under both fields</td>
+                <td data-label="Status"><span class="status fail">Fail</span></td>
+            </tr>
+            <tr>
+                <td data-label="ID">TC-004</td>
+                <td data-label="Title">Login with SQL injection attempt in email field</td>
+                <td data-label="Steps">1. Open login page<br>2. Enter <code>' OR '1'='1</code> in email field<br>3. Click "Log in"</td>
+                <td data-label="Expected result">Input is safely rejected, generic error message is shown, no database error is exposed</td>
+                <td data-label="Status"><span class="status pass">Pass</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="test-block">
+        <table>
+            <caption>Checkout — payment step</caption>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Steps</th>
+                <th>Expected result</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td data-label="ID">TC-101</td>
+                <td data-label="Title">Checkout with valid card details</td>
+                <td data-label="Steps">1. Add item to cart<br>2. Proceed to checkout<br>3. Enter valid card details<br>4. Click "Pay now"</td>
+                <td data-label="Expected result">Payment succeeds, confirmation page is displayed</td>
+                <td data-label="Status"><span class="status pass">Pass</span></td>
+            </tr>
+            <tr>
+                <td data-label="ID">TC-102</td>
+                <td data-label="Title">Checkout with expired card</td>
+                <td data-label="Steps">1. Add item to cart<br>2. Proceed to checkout<br>3. Enter card with past expiry date<br>4. Click "Pay now"</td>
+                <td data-label="Expected result">Error "Card has expired" is shown, payment is not processed</td>
+                <td data-label="Status"><span class="status blocked">Blocked</span></td>
+            </tr>
+            <tr>
+                <td data-label="ID">TC-103</td>
+                <td data-label="Title">Cart total updates after removing an item</td>
+                <td data-label="Steps">1. Add two items to cart<br>2. Remove one item<br>3. Check total price</td>
+                <td data-label="Expected result">Total price recalculates correctly after removal</td>
+                <td data-label="Status"><span class="status pass">Pass</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</main>
+
+<footer>
+    &copy; 2026 Aleksandra Kosulnikova — QA Engineer
+</footer>
+
+</body>
+</html>

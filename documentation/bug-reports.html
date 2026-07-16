@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug reports | Aleksandra Kosulnikova</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f7f7f5;
+            color: #1c1c1c;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1b2540;
+            color: #ffffff;
+            padding: 40px 24px;
+        }
+
+        header .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 14px;
+            opacity: 0.85;
+            margin-bottom: 20px;
+        }
+
+        .back-link:hover { opacity: 1; }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 15px;
+            color: #c7cbdb;
+            margin-top: 8px;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        section {
+            margin-bottom: 56px;
+        }
+
+        .section-title {
+            font-family: 'Georgia', serif;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .section-subtitle {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 20px;
+        }
+
+        .nda-note {
+            background-color: #fdf3e3;
+            border-left: 3px solid #c78a1f;
+            padding: 14px 18px;
+            margin-bottom: 24px;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 14px;
+            color: #5a4213;
+        }
+
+        /* Table styles - group 1 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 13px;
+        }
+
+        th {
+            background-color: #1b2540;
+            color: #ffffff;
+            text-align: left;
+            padding: 10px 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e5e5e2;
+            vertical-align: top;
+        }
+
+        tr:last-child td { border-bottom: none; }
+
+        .severity {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .severity.high { background-color: #fbe4e4; color: #9c2a2a; }
+        .severity.medium { background-color: #f2e9d8; color: #8a5a12; }
+        .severity.low { background-color: #e2eaf5; color: #1f4e8a; }
+
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        /* Card styles - group 2 (free text, RU) */
+        .bug-card {
+            border: 1px solid #1c1c1c;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            background-color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 14px;
+            white-space: pre-wrap;
+        }
+
+        .bug-card b {
+            font-weight: 700;
+        }
+
+        .bug-card u {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 13px;
+            color: #888888;
+        }
+
+        @media (max-width: 640px) {
+            table, thead, tbody, tr { display: block; }
+            thead { display: none; }
+            tr { margin-bottom: 16px; border: 1px solid #e5e5e2; border-radius: 4px; }
+            td { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid #f0f0ee; }
+            td::before { content: attr(data-label); font-weight: 600; color: #666; min-width: 90px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to portfolio</a>
+        <h1>Bug reports</h1>
+        <p>Examples of bug reports from commercial internship and QA automation coursework</p>
+    </div>
+</header>
+
+<main>
+
+    <!-- GROUP 1: NDA project (Sandbox) -->
+    <section>
+        <div class="section-title">Sandbox internship — project under NDA</div>
+        <div class="section-subtitle">Bug reports written during a 3-week QA Sandbox internship</div>
+
+        <div class="nda-note">
+            <strong>Note:</strong> this internship was carried out under an informal NDA. Company name and product details are withheld — the table below shows the reporting structure and format only, with generic placeholder content.
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Severity</th>
+                    <th>Environment</th>
+                    <th>Title</th>
+                    <th>Steps</th>
+                    <th>Expected result</th>
+                    <th>Actual result</th>
+                    <th>Link</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td data-label="ID">B-014</td>
+                    <td data-label="Date">2026-06-24</td>
+                    <td data-label="Severity"><span class="severity high">High</span></td>
+                    <td data-label="Environment">Chrome 126, Windows 11</td>
+                    <td data-label="Title">Trading amount field accepts negative values</td>
+                    <td data-label="Steps">1. Open trading panel<br>2. Enter a negative number in the amount field<br>3. Click "Buy"</td>
+                    <td data-label="Expected result">Field validation blocks negative input, error message is shown</td>
+                    <td data-label="Actual result">Order is submitted with a negative amount</td>
+                    <td data-label="Link"><a href="#">Ticket</a></td>
+                </tr>
+                <tr>
+                    <td data-label="ID">BG-01</td>
+                    <td data-label="Date">2026-06-17</td>
+                    <td data-label="Severity"><span class="severity major">Major</span></td>
+                    <td data-label="Environment">Win 10, Chrome 149</td>
+                    <td data-label="Title">"The page you are looking for cannot be found" error message is displayed after clicking the [https://www.beveragedaily.com/Article/2018/11/06/Molson-Coors-Cannabis-bev-/] link in the "White-paper 2025" document when CYSEC, CMA, FCA, SCB, ASIC licenses and EN language are selected.</td>
+                    <td data-label="Steps">1. Navigate to NDA.com<br>2. Select CYSEC, CMA, FCA, SCB or ASIC license (e.g. ASIC)<br>3. Select EN language<br>4. Hover over [About] menu section<br>5. Click [Whitepaper] menu item in [Who we are] menu title <br>6. Scroll down to 58 page <br>7. Click the [https://www.beveragedaily.com/Article/2018/11/06/Molson-Coors-Cannabis-bev-/] link <br>8. Pay attention to the page</td>
+                    <td data-label="Expected result">The "Molson Coors: Cannabis beverages could be a $3bn market in Canada" page is opened</td>
+                    <td data-label="Actual result">"The page you are looking for cannot be found" error message is displayed.</td>
+                    <td data-label="Link"><a href="#">Link</a></td>
+                </tr>
+                <tr>
+                    <td data-label="ID">BG-02</td>
+                    <td data-label="Date">2026-06-27</td>
+                    <td data-label="Severity"><span class="severity major">Major</span></td>
+                    <td data-label="Environment">Win 10, Chrome 149</td>
+                    <td data-label="Title">The [Sign Up] button isn't displayed in the "How to manage risk when trading" block on the "Risk management" page when FCA license and EN language are selected</td>
+                    <td data-label="Steps">1. Navigate to NDA.com<br>2. Select FCA license.<br>3. Select EN language.<br>4. Hover over [Trading] menu section.<br>5. Click [All resources] menu item in [Learn] menu title.<br>6. Click [risk-management plan] link in "Looking to sharpen your trading strategies?" tile.<br> 7. Scroll down to "How to manage risk when trading" block.<br>8. Pay attention to the [Sign up] button.</td>
+                    <td data-label="Expected result">The [Sign Up] button is displayed</td>
+                    <td data-label="Actual result">The [Sign Up] button isn't displayed</td>
+                    <td data-label="Link"><a href="#">Link</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- GROUP 2: TypeScript + Playwright course (tallinn-learning.ee) -->
+    <section>
+        <div class="section-title">QA Manual + Automation course</div>
+        <div class="section-subtitle">TypeScript + Playwright course, <a href="https://tallinn-learning.ee" target="_blank">tallinn-learning.ee</a></div>
+
+        <div class="bug-card">
+            <b>BG-01: Успешный логин курьера с использованием учетных данных студента.</b>
+            <b>Предусловие: в системе существует пользователь с ролью «Student»</b>
+
+            <b>Шаги воспроизведения</b>
+            1. Создать тело POST-запроса к endpoint /login/courier с корректными данными username и password пользователя с ролью «Student»
+            2. Отправить POST-запрос
+
+
+            <b>Ожидаемый результат</b> Неуспешный логин курьера с использованием учетных данных студента. Код ответа 401 Unauthorized и возврат тела ответа с ошибкой
+            <b>Фактический результат</b> Успешный логин курьера с использованием учетных данных студента. Код ответа 200 OK
+
+
+            <b>Окружение:</b> Brave 1.84.132
+        </div>
+
+        <div class="bug-card">
+            <b>BG-02: Успешное принятие заказа с несуществующим id заказа.</b>
+            <b>Предусловие: пользователь авторизован под ролью «Courier»</b>
+
+            <b>Шаги воспроизведения</b>
+            1. Отправить PUT-запрос на endpoint /orders/{id}/assign, указав несуществующий адрес id заказа
+
+            <b>Ожидаемый результат</b> - Неуспешное принятие заказа с несуществующим id заказа. Код ответа 400 Bad Request и возврат пустого тела ответа
+
+            <b>Фактический результат</b> - Успешное принятие заказа с несуществующим id заказа. Код ответа 200 OK
+
+            <b>Окружение:</b> Brave 1.84.132
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    &copy; 2026 Aleksandra Kosulnikova — QA Engineer
+</footer>
+
+</body>
+</html>
