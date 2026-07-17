@@ -455,4 +455,79 @@ footer p {
         border-bottom: 1px solid #e9ecef;
         padding-bottom: 30px;
     }
+
+    #certificates {
+        padding: 60px 24px;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .certificates-row {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 24px;
+    }
+
+    .cert-card {
+        position: relative;
+        width: 260px;
+        cursor: pointer;
+        border: 1px solid #e0e0dd;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .cert-card img {
+        width: 100%;
+        display: block;
+    }
+
+    .cert-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(27, 37, 64, 0.55);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        color: #ffffff;
+        font-size: 28px;
+    }
+
+    .cert-card:hover .cert-overlay {
+        opacity: 1;
+    }
+
+    /* Modal (lightbox) */
+    .cert-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cert-modal.active {
+        display: flex;
+    }
+
+    .cert-modal img {
+        max-width: 90%;
+        max-height: 85%;
+        border-radius: 4px;
+    }
+
+    .cert-modal-close {
+        position: absolute;
+        top: 24px;
+        right: 36px;
+        font-size: 36px;
+        color: #ffffff;
+        cursor: pointer;
+    }
 }
